@@ -14,6 +14,8 @@ function getPermissions(role: Role): Permisson[] {
       return ["read", "update"];
     case Role.Guest:
       return ["read"];
+    default:
+      [];
   }
 }
 
