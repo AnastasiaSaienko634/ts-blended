@@ -1,13 +1,15 @@
-type Status = "loading" | "success" | "error";
+type User = {
+  name: string;
+  age: number;
+  isAdmin?: boolean;
+};
 
-function logStatus(status: Status): void {
-  if (status === "loading") {
-    console.log("Loading...");
-  } else if (status === "success") {
-    console.log("Success!");
-  } else if (status === "error") {
-    console.log("Something went wrong");
-  }
+function createUser({ name, age }: User): User {
+  return {
+    name,
+    age,
+    isAdmin: false,
+  };
 }
 
-logStatus("loading");
+createUser({ name: "Alice", age: 30 });
