@@ -14,7 +14,7 @@ type Product = {
   price: number;
 };
 
-function fetchProducts() {
+function fetchProducts(): Promise<Product[]> {
   return new Promise<Product[]>((resolve) => {
     setTimeout(() => {
       resolve([

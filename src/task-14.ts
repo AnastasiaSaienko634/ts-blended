@@ -2,7 +2,7 @@
 
 // Функція fetchMessage повертає проміс, який повертає рядок.
 
-function fetchMessage() {
+function fetchMessage(): Promise<string> {
   return new Promise<string>((resolve) => {
     resolve("Hello from server!");
   });

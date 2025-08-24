@@ -6,7 +6,7 @@ enum Role {
 
 type Permisson = "create" | "read" | "update" | "delete";
 
-function getPermissions(role: Role): Permisson[] {
+function getPermissions(role: Role): Permisson[] | undefined {
   switch (role) {
     case Role.Admin:
       return ["create", "read", "update", "delete"];
